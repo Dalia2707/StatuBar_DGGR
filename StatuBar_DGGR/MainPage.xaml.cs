@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using StatuBar_DGGR.VistaModelo;
 
 namespace StatuBar_DGGR
 {
@@ -13,6 +14,7 @@ namespace StatuBar_DGGR
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new VMmainpage();
         }
     }
 }

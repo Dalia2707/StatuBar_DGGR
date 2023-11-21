@@ -29,7 +29,8 @@ namespace StatuBar_DGGR.Droid.statusbar
         }
         public void CambiarColor()
         {
-            if(Build.VERSION.SdkInt>= BuildVersionCodes.M)
+            MostrarStatusBar();
+            if (Build.VERSION.SdkInt>= BuildVersionCodes.M)
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
@@ -59,6 +60,7 @@ namespace StatuBar_DGGR.Droid.statusbar
 
         public void Transparente()
         {
+            MostrarStatusBar();
             if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
             {
                 Device.BeginInvokeOnMainThread(() =>
@@ -72,6 +74,7 @@ namespace StatuBar_DGGR.Droid.statusbar
 
         public void Traslucido()
         {
+            MostrarStatusBar();
             var activity = (Activity)Forms.Context;
             var atras = activity.Window.Attributes;
             _originalFlag = atras.Flags;
